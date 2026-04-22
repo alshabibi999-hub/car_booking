@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>منصة حجز المركبات — هيئة تنظيم الاتصالات</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ══ LOGIN ══ -->
+<div id="page-login" class="page active">
+  <div class="login-brand">
+    <div class="glitch-wrap" style="width:440px;max-width:88%;position:relative">
+    <img class="glitch-img" src="images/logo.svg" alt="TRA Logo" style="width:100%;display:block">
+    <img class="glitch-layer glitch-layer-1" src="images/logo.svg" alt="" style="filter:hue-rotate(120deg)">
+    <img class="glitch-layer glitch-layer-2" src="images/logo.svg" alt="" style="filter:hue-rotate(-120deg)">
+  </div>
+    <h1>منصة حجز المركبات</h1>
+  </div>
+  <div class="login-panel">
+    <div class="login-inner">
+      <h2>تسجيل الدخول</h2>
+      <p>أدخل بياناتك للوصول إلى المنصة</p>
+
+      <label class="form-label">اسم المستخدم</label>
+      <input class="form-input" type="text" id="login-username" placeholder="أدخل اسمك" autocomplete="off">
+
+      <label class="form-label">كلمة المرور</label>
+      <input class="form-input" type="password" id="login-password" placeholder="••••••••" value="1234">
+
+      <button class="btn-login" id="btn-login">دخول →</button>
+      <div class="login-error" id="login-error">اسم المستخدم غير صحيح</div>
+
+      <div class="login-divider">— أو اختر حساباً تجريبياً —</div>
+      <p style="font-size:10px;color:var(--text3);margin-bottom:10px;font-family:var(--mono)">كلمة المرور: 1234</p>
+
+      <div class="demo-accounts">
+        <div class="demo-card" id="demo-0">
+          <div class="demo-card-left">
+            <span class="demo-card-icon" style="color:var(--blue)"><span class="icon" style="width:20px;height:20px;display:inline-flex;align-items:center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span></span>
+            <div>
+              <div class="demo-card-name">عبدالله ناصر الحارثي</div>
+              <div class="demo-card-dept">الموارد البشرية</div>
+            </div>
+          </div>
+          <span class="demo-card-badge">موظف عادي</span>
+        </div>
+        <div class="demo-card" id="demo-1">
+          <div class="demo-card-left">
+            <span class="demo-card-icon" style="color:var(--blue)"><span class="icon" style="width:20px;height:20px;display:inline-flex;align-items:center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span></span>
+            <div>
+              <div class="demo-card-name">أحمد صالح البلوشي</div>
+              <div class="demo-card-dept">الموارد البشرية</div>
+            </div>
+          </div>
+          <span class="demo-card-badge">مدير دائرة</span>
+        </div>
+        <div class="demo-card" id="demo-2">
+          <div class="demo-card-left">
+            <span class="demo-card-icon" style="color:var(--blue)"><span class="icon" style="width:20px;height:20px;display:inline-flex;align-items:center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></span></span>
+            <div>
+              <div class="demo-card-name">مسؤول الشؤون الإدارية</div>
+              <div class="demo-card-dept">الشؤون الإدارية</div>
+            </div>
+          </div>
+          <span class="demo-card-badge">شؤون إدارية</span>
+        </div>
+        <div class="demo-card" id="demo-3">
+          <div class="demo-card-left">
+            <span class="demo-card-icon" style="color:var(--blue)"><span class="icon" style="width:20px;height:20px;display:inline-flex;align-items:center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span></span>
+            <div>
+              <div class="demo-card-name">مسؤول النظام</div>
+              <div class="demo-card-dept">تقنية المعلومات</div>
+            </div>
+          </div>
+          <span class="demo-card-badge">مسؤول النظام</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ APP ══ -->
+<div id="page-app" class="page">
+  <div class="shell">
+    <div class="topbar">
+      <div>
+        <div class="topbar-title">منصة حجز المركبات</div>
+      </div>
+      <div class="topbar-spacer"></div>
+      <div class="topbar-user">
+        <div class="topbar-avatar" id="tb-avatar">م</div>
+        <div>
+          <div class="topbar-uname" id="tb-name">—</div>
+          <div class="topbar-urole" id="tb-role">—</div>
+        </div>
+      </div>
+      <button class="topbar-logout" onclick="logout()" title="خروج"><span class="icon" style="width:18px;height:18px;display:inline-flex;align-items:center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></span></button>
+    </div>
+    <div class="sidebar" id="sidebar"></div>
+    <div class="main-content" id="main-content">
+
+      <!-- DASHBOARD -->
+      <div class="inner-page" id="ip-dashboard">
+        <div class="page-header">
+          <h2>لوحة المتابعة</h2>
+          <p id="dash-sub"></p>
+          <div class="page-actions">
+            <button class="btn btn-accent" onclick="nav('ip-new-request')"><span class="icon" style="width:14px;height:14px;display:inline-flex;align-items:center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span> طلب جديد</button>
+          </div>
+        </div>
+        <div id="role-toggle-wrap" style="display:none">
+          <div class="role-toggle">
+            <button class="role-toggle-btn active" id="tog-emp" onclick="setView('employee')">👤 موظف</button>
+            <button class="role-toggle-btn" id="tog-mgr" onclick="setView('manager')">👔 مدير دائرة</button>
+          </div>
+        </div>
+        <div class="stats-row" id="dash-stats"></div>
+        <div class="table-wrap">
+          <div class="table-header"><span class="table-title">طلباتي الأخيرة</span><span id="dash-count" style="font-size:12px;color:var(--text3);font-family:var(--mono)"></span></div>
+          <div id="dash-table"></div>
+        </div>
+      </div>
+
+      <!-- NEW REQUEST -->
+      <div class="inner-page" id="ip-new-request">
+        <div class="page-header"><h2>تقديم طلب حجز مركبة</h2><p>يرجى تعبئة جميع الحقول الإلزامية قبل الإرسال</p></div>
+        <div id="req-alert"></div>
+        <div class="form-card">
+          <div class="form-grid">
+            <div class="form-field"><label>اسم الموظف <span class="req">*</span></label><input type="text" id="req-name" readonly></div>
+            <div class="form-field"><label>الدائرة <span class="req">*</span></label><input type="text" id="req-dept" readonly></div>
+            <div class="form-field">
+              <label>المركبة المطلوبة <span class="req">*</span></label>
+              <div class="veh-dropdown">
+                <div class="veh-display" id="veh-display" tabindex="0">— اختر المركبة —</div>
+                <div class="veh-list" id="veh-list"></div>
+                <input type="hidden" id="req-vehicle">
+              </div>
+            </div>
+            <div class="form-field"><label>نوع الطلب <span class="req">*</span></label><select id="req-type"><option value="">— اختر —</option><option>مهمة رسمية</option><option>زيارة ميدانية</option><option>اجتماع خارجي</option><option>أخرى</option></select></div>
+            <div class="form-field"><label>تاريخ الاستلام <span class="req">*</span></label><input type="datetime-local" id="req-pickup"></div>
+            <div class="form-field"><label>تاريخ الإرجاع <span class="req">*</span></label><input type="datetime-local" id="req-return"></div>
+            <div class="form-field"><label>الغرض / الوجهة <span class="req">*</span></label><input type="text" id="req-purpose" placeholder="مثال: اجتماع مع وزارة الاتصالات"></div>
+            <div class="form-field"><label>عدد المرافقين</label><input type="number" id="req-passengers" min="0" max="10" value="0"></div>
+            <div class="form-field"><label>المنطقة (خارج مسقط)</label><input type="text" id="req-area" placeholder="اتركه فارغاً إذا كانت داخل مسقط"></div>
+            <div class="form-field"><label>متطلبات أخرى</label><input type="text" id="req-extras"></div>
+            <div class="form-field full"><label>ملاحظات</label><textarea id="req-notes"></textarea></div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-accent" onclick="submitReq()"><span class="icon" style="width:14px;height:14px;display:inline-flex;align-items:center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span> إرسال الطلب</button>
+            <button class="btn btn-ghost" onclick="nav('ip-dashboard')">✕ إلغاء</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- MY REQUESTS -->
+      <div class="inner-page" id="ip-my-requests">
+        <div class="page-header"><h2>طلباتي</h2><p>جميع طلبات حجز المركبات</p></div>
+        <div class="filter-row">
+          <input type="text" id="f-req-search" placeholder="🔍 بحث..." oninput="renderMyReqs()">
+          <select id="f-req-status" onchange="renderMyReqs()">
+            <option value="">الكل</option>
+            <option value="pending">بانتظار المدير</option>
+            <option value="manager_approved">بانتظار الشؤون</option>
+            <option value="approved">معتمد</option>
+            <option value="rejected">مرفوض</option>
+            <option value="suspended">معلّق</option>
+          </select>
+        </div>
+        <div class="table-wrap"><div id="my-reqs-table"></div></div>
+      </div>
+
+      <!-- MANAGER APPROVALS -->
+      <div class="inner-page" id="ip-mgr-approvals">
+        <div class="page-header"><h2>اعتماد المدير المباشر</h2><p>طلبات موظفي دائرتك بانتظار موافقتك</p></div>
+        <div id="mgr-list"></div>
+      </div>
+
+      <!-- ADMIN DEPT APPROVALS -->
+      <div class="inner-page" id="ip-admin-approvals">
+        <div class="page-header"><h2>اعتماد الشؤون الإدارية</h2><p>الطلبات المعتمدة من المدراء وبانتظار الاعتماد النهائي</p></div>
+        <div class="filter-row"><select id="f-admin-dept" onchange="renderAdminAppr()"><option value="">جميع الدوائر</option></select></div>
+        <div id="admin-list"></div>
+      </div>
+
+      <!-- ADMIN VEHICLES -->
+      <div class="inner-page" id="ip-vehicles">
+        <div class="page-header"><h2>إدارة المركبات</h2><p>قائمة مركبات الهيئة</p><div class="page-actions"><button class="btn btn-accent" onclick="openAddVeh()"><span class="icon" style="width:14px;height:14px;display:inline-flex;align-items:center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span> إضافة مركبة</button></div></div>
+        <div class="cars-grid" id="cars-grid"></div>
+      </div>
+
+      <!-- ADMIN USERS -->
+      <div class="inner-page" id="ip-users">
+        <div class="page-header">
+          <h2>إدارة المستخدمين</h2>
+          <p>إدارة حسابات موظفي الهيئة وصلاحياتهم</p>
+          <div class="page-actions">
+            <button class="btn btn-accent" onclick="openUserModal()">
+              <span class="icon" style="width:14px;height:14px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              إضافة مستخدم
+            </button>
+          </div>
+        </div>
+        <div class="filter-row">
+          <input type="text" id="f-users-search" placeholder="بحث بالاسم..." oninput="renderUsers()">
+          <select id="f-users-dept" onchange="renderUsers()"><option value="">جميع الدوائر</option></select>
+          <select id="f-users-role" onchange="renderUsers()">
+            <option value="">جميع الأدوار</option>
+            <option value="موظف">موظف</option>
+            <option value="مدير">مدير دائرة</option>
+            <option value="admin_dept">شؤون إدارية</option>
+            <option value="admin">مسؤول النظام</option>
+          </select>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:48px">#</th>
+                <th>الاسم</th>
+                <th>الدائرة</th>
+                <th>المنصب</th>
+                <th>الدور في المنصة</th>
+                <th>كلمة المرور</th>
+                <th style="width:100px">إجراء</th>
+              </tr>
+            </thead>
+            <tbody id="users-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ADMIN ALL REQUESTS -->
+      <div class="inner-page" id="ip-all-reqs">
+        <div class="page-header"><h2>جميع الطلبات</h2><p>أرشيف كامل</p></div>
+        <div class="filter-row">
+          <input type="text" id="f-all-search" placeholder="🔍 بحث..." oninput="renderAllReqs()">
+          <select id="f-all-status" onchange="renderAllReqs()"><option value="">الكل</option><option value="pending">بانتظار المدير</option><option value="manager_approved">بانتظار الشؤون</option><option value="approved">معتمد</option><option value="rejected">مرفوض</option><option value="suspended">معلّق</option></select>
+          <select id="f-all-dept" onchange="renderAllReqs()"><option value="">جميع الدوائر</option></select>
+        </div>
+        <div class="table-wrap"><div id="all-reqs-table"></div></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="modal-detail">
+  <div class="modal">
+    <div class="modal-header"><span class="modal-title">تفاصيل الطلب</span><button class="modal-close" onclick="closeModal('modal-detail')">✕</button></div>
+    <div class="modal-body" id="modal-detail-body"></div>
+    <div class="modal-footer" id="modal-detail-footer"></div>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-add-veh">
+  <div class="modal">
+    <div class="modal-header"><span class="modal-title">إضافة مركبة</span><button class="modal-close" onclick="closeModal('modal-add-veh')">✕</button></div>
+    <div class="modal-body">
+      <div class="form-field" style="margin-bottom:14px"><label>موديل المركبة</label><input type="text" id="add-veh-model" class="form-input" placeholder="مثال: Toyota Hilux"></div>
+      <div class="form-field"><label>رقم اللوحة</label><input type="text" id="add-veh-plate" class="form-input" placeholder="مثال: 76-21"></div>
+    </div>
+    <div class="modal-footer"><button class="btn btn-accent" onclick="addVeh()">إضافة</button><button class="btn btn-ghost" onclick="closeModal('modal-add-veh')">إلغاء</button></div>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-reason">
+  <div class="modal" style="max-width:420px">
+    <div class="modal-header"><span class="modal-title" id="reason-title">سبب القرار</span><button class="modal-close" onclick="closeModal('modal-reason')">✕</button></div>
+    <div class="modal-body"><textarea id="reason-input" style="width:100%;min-height:100px;background:var(--gray);border:1px solid var(--border);border-radius:var(--radius);padding:10px;font-family:var(--sans);font-size:13px;outline:none" placeholder="أدخل السبب (اختياري)..."></textarea></div>
+    <div class="modal-footer"><button class="btn btn-accent" id="reason-confirm">تأكيد</button><button class="btn btn-ghost" onclick="closeModal('modal-reason')">إلغاء</button></div>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+
+<!-- MODAL: ADD / EDIT USER -->
+<div class="modal-overlay" id="modal-user">
+  <div class="modal" style="max-width:500px">
+    <div class="modal-header">
+      <span class="modal-title" id="user-modal-title">إضافة مستخدم جديد</span>
+      <button class="modal-close" onclick="closeModal('modal-user')">✕</button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="edit-user-id">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div class="form-field full" style="grid-column:1/-1">
+          <label>الاسم الكامل <span style="color:var(--red)">*</span></label>
+          <input type="text" id="edit-user-name" class="form-input" placeholder="مثال: محمد سالم الريامي">
+        </div>
+        <div class="form-field">
+          <label>الدائرة <span style="color:var(--red)">*</span></label>
+          <select id="edit-user-dept" class="form-input">
+            <option value="">— اختر الدائرة —</option>
+            <option>الموارد البشرية</option>
+            <option>المالية</option>
+            <option>تقنية المعلومات</option>
+            <option>التسويق</option>
+            <option>المبيعات</option>
+            <option>العمليات</option>
+            <option>اللوجستيات</option>
+            <option>خدمة العملاء</option>
+            <option>المشتريات</option>
+            <option>القسم القانوني</option>
+            <option>الشؤون الإدارية</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>المنصب / الدور <span style="color:var(--red)">*</span></label>
+          <select id="edit-user-role" class="form-input">
+            <option value="موظف">موظف</option>
+            <option value="مدير">مدير دائرة</option>
+            <option value="admin_dept">شؤون إدارية</option>
+            <option value="admin">مسؤول النظام</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>كلمة المرور <span style="color:var(--red)">*</span></label>
+          <div style="position:relative">
+            <input type="text" id="edit-user-password" class="form-input" placeholder="أدخل كلمة المرور" style="margin-bottom:0;padding-left:40px">
+            <button onclick="genPassword()" title="توليد تلقائي"
+              style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--blue);font-size:16px;padding:2px">⟳</button>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>الحالة</label>
+          <select id="edit-user-status" class="form-input">
+            <option value="active">نشط</option>
+            <option value="inactive">موقوف</option>
+          </select>
+        </div>
+      </div>
+      <div id="user-modal-error" style="color:var(--red);font-size:12px;margin-top:12px;display:none"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-accent" onclick="saveUser()">
+        <span class="icon" style="width:14px;height:14px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+        حفظ
+      </button>
+      <button class="btn btn-ghost" onclick="closeModal('modal-user')">إلغاء</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
